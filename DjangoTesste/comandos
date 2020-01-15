@@ -1,0 +1,11 @@
+https://docs.djangoproject.com/en/3.0/intro/tutorial02/
+
+django-admin createproject DjangoProjeto
+python3 manage.py createapp DjangoApp
+
+from teste.models import Artigo, ImagemArtigo
+Artigo.objects.all()
+from django.utils import timezone
+q = Artigo(titulo="teste",data=timezone.now())
+q.save()
+q.id
