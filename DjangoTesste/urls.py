@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from teste import views
+from teste import views as viewsTeste
 
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('', viewsTeste.index, name="index"),
+    path('testeTemplate/<str:nome>', viewsTeste.template, name="template"),
 ]
